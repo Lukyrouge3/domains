@@ -1,0 +1,31 @@
+opencollection: 1.0.0
+
+info:
+  name: Domains
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  headers:
+    - name: Referer
+      value: "{{BASE_URL}}"
+  scripts:
+    - type: before-request
+      code: |-
+        const xsrf = bru.cookies.get("XSRF-TOKEN");
+        if (xsrf) req.setHeader("X-XSRF-TOKEN", decodeURIComponent(xsrf));
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

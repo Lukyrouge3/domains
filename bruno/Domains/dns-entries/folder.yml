@@ -1,0 +1,7 @@
+info:
+  name: dns-entries
+  type: folder
+  seq: 2
+
+request:
+  auth: inherit

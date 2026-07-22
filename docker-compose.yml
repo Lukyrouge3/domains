@@ -1,0 +1,16 @@
+services:
+  laravel:
+    build: ./back
+    env_file: ./back/.env
+    volumes:
+      - sqlite_data:/var/www/database
+
+  frontend:
+    build: ./front
+    ports:
+      - "3000:80"
+    depends_on:
+      - laravel
+
+volumes:
+  sqlite_data:

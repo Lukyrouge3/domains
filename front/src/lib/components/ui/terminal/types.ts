@@ -22,3 +22,12 @@ export type TerminalLoadingProps = Omit<TerminalAnimationProps, 'children'> & {
 	completeMessage: Snippet<[]>;
 	duration?: number;
 };
+
+export type TerminalLoadingAsyncProps<T> = {
+	delay?: number;
+	promise: Promise<T>;
+	loadingMessage: Snippet;
+	completeMessage: Snippet<[T]>;
+	errorMessage?: Snippet<[unknown]>;
+	class?: string;
+};

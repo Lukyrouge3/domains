@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpTestFrameworkSettings">
+    <test_tools>
+      <tool tool_name="Pest">
+        <settings>
+          <configurations>
+            <configuration_by_sdk interpreter_id="e58e7414-e9b5-4f6a-b15e-fee78a9668d3" configuration_file_path="//wsl.localhost/Ubuntu/home/torrentef/domains/back/phpunit.xml" executable_path="//wsl.localhost/Ubuntu/home/torrentef/domains/back/vendor/pestphp/pest/bin/pest" use_configuration_file="true" />
+          </configurations>
+        </settings>
+      </tool>
+    </test_tools>
+  </component>
+</project>
